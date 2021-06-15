@@ -1,0 +1,314 @@
+
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{siunitx}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+\usepackage{txfonts}
+\usepackage{stfloats}
+
+\usepackage{steinmetz}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usetikzlibrary{calc,math}
+\usetikzlibrary{fadings}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\abs}[1]{\lvert#1\rvert} 
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{ASSIGNMENT-5}
+\author{R.YAMINI}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%
+\section{QUESTION No-2.98 (Quadratic forms)}
+\item Find the area lying above x-axis and included between the circle $\vec{x}^T\vec{x}-8\myvec{1 & 0}\vec{x}=0$  and inside of the parabola $y^2 = 4x$.
+%
+
+%
+\section{Solution}
+Given equation of the circle 
+\begin{align}
+ \vec{x}^T\vec{x}-8\myvec{1 & 0}\vec{x}=0.\label{eq:eqn1}  
+\end{align}
+We know that the general equation of a circle is given by
+\begin{align}
+  \vec{x}^T\vec{x}+2\vec{u}^T\vec{x}+f=0  
+\end{align}
+We have $\vec{u} = \myvec{-4 \\ 0}$ and $f = 0$.Thus we have the center and radius as 
+\begin{align}
+\vec{c} = -\vec{u} = \myvec{4 \\ 0}
+\end{align} and 
+\begin{align}
+r= \sqrt{\vec{u^T}\vec{u} - f} = 4
+\end{align} respectively.
+Given equation of the parabola 
+\begin{align}
+ \vec{x}^T\myvec{0&0 \\ 0&1}\vec{x}-4\myvec{1&0}\vec{x}=0 \label{eq:eqn2}  
+\end{align}
+The plot of the above two curves is
+\numberwithin{figure}{section}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{Area.PNG}
+\caption{Plot of the curves}
+\label{Plot of the curves}
+\end{figure}
+\\
+We can see that y-axis is the tangent for both the circle and the parabola.
+Now the parametric equation of the tangent is given by
+\begin{align}
+    \vec{x}= \myvec{0 \\ 0} +\lambda\myvec{0 \\ 1} 
+    \\
+    = \myvec{0 \\ \lambda} \label{eq:eqn3}
+\end{align}
+Now substitute \eqref{eq:eqn3} in \eqref{eq:eqn1},
+\begin{align}
+\myvec{0&\lambda}\myvec{0 \\ \lambda}-8\myvec{1&0}\myvec{0 \\ \lambda}=0
+\\
+\implies \lambda=0
+\end{align}
+Thus the point of contact of the tangent with the circle is $A=\myvec{0 \\ 0}$.
+Now to find the point of contact of the tangent with the parabola,substiute \eqref{eq:eqn3} in \eqref{eq:eqn2}
+\begin{align}
+    \myvec{0&\lambda}\myvec{0&0 \\ 0&1}\myvec{0 \\ \lambda}-4\myvec{1&0}\myvec{0 \\ \lambda}=0
+    \\
+    \implies \lambda=0
+\end{align}
+Thus the point of contact of the parabola with the tangent is $\vec{A}=\myvec{0 \\ 0}$.
+Thus $\vec{A}=\myvec{0 \\ 0}$ is the point of contact for the circle,the parabola and the tangent.
+Now to find the point of contact of the circle and parabola with the chord.
+The chord equation in parametric form is given as
+\begin{align}
+    \vec{x}= \myvec{4 \\ 0} +\lambda\myvec{0 \\ 1} 
+    \\
+    = \myvec{4 \\ \lambda} \label{eq:eqna}
+\end{align}
+Now substitute \eqref{eq:eqna} in \eqref{eq:eqn1} and \eqref{eq:eqn2}
+\begin{align}
+\myvec{4&\lambda}\myvec{4 \\ \lambda}-8\myvec{1&0}\myvec{4 \\ \lambda}=0
+\\
+\implies \lambda=\pm 4
+\end{align}
+Since the area to be found is above the x-axis we consider $\lambda = +4$ and substituting in \eqref{eq:eqna} we obtain the point of contact to be
+$\vec{C}=\myvec{4 \\ 4}$.
+Now to find the point of contact of the chord with parabola,sustitute \eqref{eq:eqna} in \eqref{eq:eqn2},
+\begin{align}
+    \myvec{4&\lambda}\myvec{0&0 \\ 0&1}\myvec{4 \\ \lambda}-4\myvec{1&0}\myvec{4 \\ \lambda}=0
+    \\
+    \implies \lambda=\pm 4
+\end{align}
+Since the area to be found is above the x-axis we consider $\lambda = +4$ and substituting in \eqref{eq:eqna} we obtain the point of contact to be
+$\vec{C}=\myvec{4 \\ 4}$.
+Thus $\vec{C}=\myvec{4 \\ 4}$ is the point of contact for the circle,the parabola and the chord.
+\\
+\brak{\textbf{OR}}
+Now to find the point of contact of the circle and parabola with the chord.
+Since the chord is parallel to the tangent their equation differ by a constant.
+So, let the equation of the chord be of the form 
+\begin{align}
+  \vec{x}=\myvec{0 \\ 0}+\brak{\lambda +c}\myvec{0 \\ 1}  
+  \\
+  = \myvec{0 \\ \brak{\lambda + c}}\label{eq:eqn4}
+\end{align}
+Now substitute \eqref{eq:eqn4} in \eqref{eq:eqn2} we have,
+\\
+\\
+Now to find the area bounded above the x-axis,the parabola and the circle.
+From fig.2.1 the area to be calculated is $AOBCA$.
+\begin{align}
+Ar\brak{AOBCA} = Ar\brak{ACOA} + Ar\brak{OCBO}
+\\
+= A_{1} + A_{2}
+\end{align}
+To calculate $A_{1}$:
+$A_{1}$ is the area enclosed by the parabola $y^2=4x$ and the line $OC$.Thus
+\begin{align}
+    A_{1} = \frac{2}{3}\brak{AO}\brak{OC}
+    \\
+    = \frac{2}{3}\brak{4}\brak{4} = \frac{32}{3}
+\end{align}
+To calculate $A_{2}$: $A_{2}$ is one fourth of the area of the circle.
+\begin{align}
+    A_{2} = \frac{1}{4}\brak{\pi r^2}
+    \\
+    = \frac{1}{4}\brak{16\pi}
+    \\
+    = 4\pi
+\end{align}
+Now substituting (2.0.5) and (2.0.8) in (2.0.3) we get
+\begin{align}
+    A_{1} + A_{2} = \frac{32}{3} + 4\pi
+    \\
+    = 4\brak{\frac{8}{3} + \pi} 
+\end{align}
+Thus (2.0.l0) is the required area.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Solution}
+Given equation of the circle 
+\begin{align}
+ \vec{x}^T\vec{x}-8\myvec{1 & 0}\vec{x}=0.\label{eq:eqn1}  
+\end{align}
+We know that the general equation of a circle is given by
+\begin{align}
+  \vec{x}^T\vec{x}+2\vec{u}^T\vec{x}+f=0  
+\end{align}
+We have $\vec{u} = \myvec{-4 \\ 0}$ and $f = 0$.Thus we have the center and radius as 
+\begin{align}
+\vec{c} = -\vec{u} = \myvec{4 \\ 0}
+\end{align} and 
+\begin{align}
+r= \sqrt{\vec{u^T}\vec{u} - f} = 4
+\end{align} respectively.
+Given equation of the parabola 
+\begin{align}
+ \vec{x}^T\myvec{0&0 \\ 0&1}\vec{x}-4\myvec{1&0}\vec{x}=0 \label{eq:eqn2}  
+\end{align}
+The plot of the above two curves is
+\numberwithin{figure}{section}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{Area.PNG}
+\caption{Plot of the curves}
+\label{Plot of the curves}
+\end{figure}
+\\
+We can see that y-axis is the tangent for both the circle and the parabola.
+Let the parametric equation of the tangent be
+\begin{align}
+    \vec{x} = \vec{q}+\lambda\vec{m} \label{eq:eqnb}
+\end{align}
+Substitute \eqref{eq:eqnb} in \eqref{eq:eqn1} 
+\begin{align}
+  \brak{\vec{q}+\lambda\vec{m}}^{\top}\brak{\vec{q}+\lambda\vec{m}}-8\myvec{1&0}\brak{\vec{q}+\lambda\vec{m}} =0 \label{eq:eqnI}
+ \end{align}
+Now substitute \eqref{eq:eqnb} in \eqref{eq:eqn2} 
+\begin{align}
+    \brak{\vec{q}+\lambda\vec{m}}^{\top}\myvec{0&0 \\ 0&1}\brak{\vec{q}+\lambda\vec{m}}-4\myvec{0&1}\brak{\vec{q}+\lambda\vec{m}} =0 \label{eq:eqnII}
+\end{align}
+Now subtracting \eqref{eq:eqnII} from \eqref{eq:eqnI},
+\begin{align}
+  \brak{\vec{q}+\lambda\vec{m}}^{\top}\brak{\vec{q}+\lambda\vec{m}}-8\myvec{1&0}\brak{\vec{q}+\lambda\vec{m}}-\brak{\vec{q}+\lambda\vec{m}}^{\top}\myvec{0&0 \\ 0&1}\brak{\vec{q}+\lambda\vec{m}}+4\myvec{0&1}\brak{\vec{q}+\lambda\vec{m}} =0 
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
